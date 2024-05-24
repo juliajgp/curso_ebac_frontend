@@ -123,7 +123,7 @@ form textarea {
 }
 
 input:focus, textarea:focus {
-    outline-color: #182C61;
+    outline-color: #109a7e;
 }
 
 section h3 {
@@ -139,11 +139,11 @@ form button {
 }
 
 form button:hover {
-    background-color: #314e9e;
+    background-color: #49cbb1;
 }
 
 footer {
-    background-color: #182C61;
+    background-color: #109a7e;
     color: #ecf0f1;
     padding: 16px 0;
 }
