@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Tarefas com jQuery</title>
+</head>
+<body>
+    <h2>Lista de Tarefas</h2>
+
+    <form name="listaTarefas">
+        <input type="text" id="item">
+        <input id="button" type="submit" value="Cadastrar">
+    </form>
+
+    <ul></ul>
+
+
+    <script>
+        $(document).ready(function() { 
+            $('form').on('submit', function(e) {
+                event.preventDefault();
+            });
+            $('#button').on('keypress click', function(e) {
+                /* var toAdd = $('#item').val();
+                if (e.type === 'click') {
+                    $('ul').append('<li>' + toAdd + '</li>');
+                } */
+                var toAdd = $('#item').val();
+                if(e.which == 13 || e.type === 'click'){
+                    $('ul').append('<li class="itemDaLista">' + toAdd + '</li>');
+                }
+                $('#item').val('');
+            });
+            $(document).on('click', '.itemDaLista', function() { 
+                if ($(this).css('text-decoration-line') == "none") 
+                    $(this).css('text-decoration-line', 'line-through'); 
+                else 
+                    $(this).css('text-decoration-line', 'none'); 
+            }); 
+        }); 
+    </script>
+</body>
+</html>
