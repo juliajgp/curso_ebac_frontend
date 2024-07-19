@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+header { 
+    padding: 16px 0;
+    background-color: #109a7e;
+    color: #ecf0f1;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    list-style: none;
+}
+
+nav li {
+    font-size: 18px;
+}
+
+nav li a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.container, #produtos h2, #produtos hr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+}
+
+#about {
+    margin: 2rem 0;
+    color: #0d856d;
+}
+
+#about img {
+    width: 50%;
+    margin-right: 50px;
+}
+
+#produtos ul {
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#produtos a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(134, 134, 134);
+    border-radius: 5px;
+    text-decoration: none;
+    height: 500px;
+    width: 16rem;
+    position: relative;
+}
+
+#produtos img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#produtos button {
+    background-color: #109a7e;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.texto-produtos, #produtos h2 {
+    color: #0d856d;
+}
+
+#about hr, #produtos hr {
+    height: 3px;
+    background-color: #109a7e;
+    margin-bottom: 2rem;
+}
+
+.texto-produtos {
+    margin: 40px;
+}
+
+@media (max-width: 640px) {
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul {
+        gap: 0;
+        align-items: flex-start;
+    }
+
+    header .container {
+        font-size: 85%;
+    }
+
+    #about .container{
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+
+    #about img {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+
+    header .container {
+        font-size: 85%;
+    }
+
+    #about .container{
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+
+    #about img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #produtos ul {
+        flex-wrap: wrap;
+    }
+
+    #produtos li {
+        max-width: 16rem;
+    }
+}
