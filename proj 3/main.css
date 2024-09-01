@@ -1,0 +1,187 @@
+@font-face {
+    font-family: "Refrigerator Deluxe", sans-serif;
+    src: url(./font/Refrigerator\ Deluxe.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Refrigerator Deluxe", sans-serif;
+    src: url(./font/Refrigerator\ Deluxe\ Bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Refrigerator Deluxe", sans-serif;
+    src: url(./font/Refrigerator\ Deluxe\ Extrabold.otf.otf);
+    font-weight: bolder;
+}
+
+body {
+    font-family: Jost, sans-serif;
+    background-color: #ffffff;
+}
+
+.navbar {
+    background-color: #dc421c;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.8em;
+    letter-spacing: 0.7px;
+}
+
+.carousel {
+    max-height: 650px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+#cabecalho .nav .nav-link.active {
+    background-color: #fff;
+    color: #dc421c;
+    font-weight: 600;
+}
+
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover,
+.nav-cardapio .nav-link.active:hover {
+    color: #fff;
+}
+
+.navbar-toggler {
+    background-color: #fff;
+}
+
+.section-title {
+    font-family: 'Josefin Slab', cursive;
+}
+
+#sobre-o-restaurante, #eventos, #cardapio, #fale-conosco {
+    padding: 0 10em;
+}
+
+
+#sobre-o-restaurante, #cardapio {
+    background-color: #aabba3;
+    color: #fff;
+}
+
+#eventos h3 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#eventos img {
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.nav-cardapio .nav-link.active,
+#fale-conosco button {
+    background-color: #fff;
+}
+
+.text-colored {
+    color: #eb2e2f;
+}
+
+.nav-cardapio .nav-link {
+    color: #fff;
+}
+
+.social-links li {
+    list-style: none;
+    display: inline;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.cores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    font-family: 'Josefin Slab', cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dot {
+    height: 150px;
+    width: 150px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+
+/* different fonts for nav */
+aside .tghb-font{
+    font-family: 'Josefin Slab', cursive;
+}
+
+aside .tghb-font.active {
+    background-color: #fad5e6 !important;
+    color: #eb2e2f !important;
+}
+
+aside .iod-font{
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+aside .iod-font.active {
+    background-color: #000 !important;
+    color: #efd319 !important;
+}
+
+aside .mk-font {
+    font-family: "Petit Formal Script", cursive;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+aside .mk-font.active {
+    background-color: #d8d6a4 !important;
+    color: #cc7420 !important;
+}
+
+aside .ac-font {
+    font-family: "Refrigerator Deluxe", sans-serif;
+    font-weight: bolder !important;
+    letter-spacing: 0.7px;
+}
+
+aside .ac-font.active {
+    background-color: #4fb9ab !important;
+    color: #fba922 !important;
+    text-shadow: 0.8px 0.8px #c8201d;
+}
+
+aside .alosz-font {
+    letter-spacing: 0;
+}
+
+aside .alosz-font.active {
+    background-color: #112047 !important;
+    color: #ffd754 !important;
+}
+
+@media (max-width: 767px) {
+    .carousel-item img {
+        height: 280px;
+    }
+}
