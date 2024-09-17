@@ -1,0 +1,17 @@
+$layout-breakpoint-tablet: 1023px
+$layout-breakpoint-phone: 767px
+
+@media (max-width: $layout-breakpoint-tablet) 
+    .container 
+        max-width: 80% 
+
+    .products
+        grid-template-columns: repeat(2, 48.5%)
+        column-gap: 3%
+
+@media (max-width: $layout-breakpoint-phone)
+    .products
+        display: block
+
+    .product-item
+        margin-bottom: 32px
