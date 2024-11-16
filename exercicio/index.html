@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Github</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="profile-avatar" id="profile-avatar" src="https://via.placeholder.com/180x180" alt="Avatar">
+            <h1 class="profile-name" id="profile-name">Júlia Pinheiro</h1>
+            <h2 class="profile-username" id="profile-username">@juliajgp</h2>
+            <ul class="numbers">
+                <li class="numbers-item">
+                    <h4>Repositórios</h4>
+                    <span id="repositories-count">-</span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguidores</h4>
+                    <span id="followers-count">-</span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguindo</h4>
+                    <span id="following-count">-</span>
+                </li>
+            </ul>
+            <a href="#" id="profile-link" class="profile-link">Ver no Github</a>
+        </div>
+    </header>
+    
+    <script>
+        const username = "juliajgp"; // Substitua por um nome de usuário do GitHub válido
+        const apiUrl = `https://api.github.com/users/${username}`;
+
+        async function fetchGitHubProfile() {
+            try {
+                const response = await fetch(apiUrl);
+
+                if (!response.ok) {
+                    throw new Error(`Erro ao buscar dados: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Atualiza os elementos da página com os dados obtidos
+                document.getElementById('profile-avatar').src = data.avatar_url;
+                document.getElementById('profile-name').textContent = data.name || "Nome não disponível";
+                document.getElementById('profile-username').textContent = `@${data.login}`;
+                document.getElementById('repositories-count').textContent = data.public_repos;
+                document.getElementById('followers-count').textContent = data.followers;
+                document.getElementById('following-count').textContent = data.following;
+                document.getElementById('profile-link').href = data.html_url;
+                document.getElementById('profile-link').textContent = "Ver no Github";
+            } catch (error) {
+                console.error("Erro ao carregar perfil:", error);
+            }
+        }
+
+        // Chama a função para carregar os dados
+        fetchGitHubProfile();
+    </script>
+</body>
+</html>
